@@ -1,11 +1,12 @@
 "use client";
-import { Button } from "antd";
+import { Button, Tooltip } from "antd";
 import { Gauge } from "lucide-react";
 import { useContext } from "react";
 import { statusMotorContext } from "../context/stautsMotorContext";
 
 const ButtonSpeedControl = () => {
-  const { EngineSpeed, handelHeightSpeed } = useContext(statusMotorContext);
+  const { EngineSpeed, handelHeightSpeed, PowerMotor } =
+    useContext(statusMotorContext);
   return (
     <div className="border border-1 w-[321px] mx-auto border-white rounded-md py-2">
       <div
@@ -18,26 +19,36 @@ const ButtonSpeedControl = () => {
         <Gauge size={15} />
       </div>
       <div className="buttom-operations justify-center flex gap-2 ">
-        <Button
-          className={`px-6 ${
-            EngineSpeed === "hight" ? "" : "bg-[#3d4045]"
-          } py1`}
-          size="large"
-          onClick={() => handelHeightSpeed("hight")}
-          variant={"solid"}
-          color="cyan"
-        >
-          زیاد
-        </Button>
-        <Button
-          className={`px-6 ${EngineSpeed === "slow" ? "" : "bg-[#3d4045]"} py1`}
-          size="large"
-          variant={"solid"}
-          color="cyan"
-          onClick={() => handelHeightSpeed("slow")}
-        >
-          کم
-        </Button>
+        <Tooltip title={`${PowerMotor ? "" : "ابتدا موتور را روشن کنید"}`}>
+          <Button
+            className={`disabled:bg-[#3d4045] disabled:text-white disabled:border-[#3d4045]
+             text-white px-6 ${
+               EngineSpeed === "hight" ? "" : "bg-[#3d4045]"
+             } py-1`}
+            size="large"
+            onClick={() => handelHeightSpeed("hight")}
+            variant={"solid"}
+            disabled={PowerMotor ? false : true}
+            color="cyan"
+          >
+            زیاد
+          </Button>
+        </Tooltip>
+        <Tooltip title={`${PowerMotor ? "" : "ابتدا موتور را روشن کنید"}`}>
+          <Button
+            className={`disabled:bg-[#3d4045] disabled:text-white disabled:border-[#3d4045]
+             text-white px-6 ${
+               EngineSpeed === "slow" ? "" : "bg-[#3d4045]"
+             } py-1`}
+            size="large"
+            variant={"solid"}
+            disabled={PowerMotor ? false : true}
+            color="cyan"
+            onClick={() => handelHeightSpeed("slow")}
+          >
+            کم
+          </Button>
+        </Tooltip>
       </div>
     </div>
   );
