@@ -8,10 +8,10 @@ const StatusPumpAndMotor = () => {
   const { EngineSpeed } = useContext(statusMotorContext);
   const { PumpPower } = useContext(statusPumpContext);
   return (
-    <div className="text-center mx-auto  h-[300px] flex justify-center items-center">
+    <div className="text-center mx-auto  h-[375px] flex justify-center items-center">
       <div
         style={{ backgroundColor: "#18466a" }}
-        className="  rounded-md p-1 w-[266px] h-[268px]"
+        className="  rounded-md p-1 w-[321px] h-[329px]"
       >
         <FanIcon />
         <p className="text-white  text-2xl text-bold mt-1">

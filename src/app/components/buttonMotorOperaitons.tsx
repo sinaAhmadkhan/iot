@@ -8,7 +8,7 @@ const ButtonMotorOperations = () => {
   const { PowerMotor, handelOffMotor, handelOnMotor } =
     useContext(statusMotorContext);
   return (
-    <div className="border border-1 w-[266px] mx-auto border-white rounded-md py-2">
+    <div className="border border-1 w-[321px] mx-auto border-white rounded-md py-2">
       <div
         style={{ direction: "rtl" }}
         className=" flex gap-2 pb-1 items-center text-white"
