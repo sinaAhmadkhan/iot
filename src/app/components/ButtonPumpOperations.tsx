@@ -20,7 +20,7 @@ const ButtonPumpOperations = () => {
       </div>
       <div className="buttom-operations justify-center flex gap-2 ">
         <Button
-          size="small"
+          size="large"
           className={`${PumpPower ? "" : "bg-[#3d4045]"} `}
           onClick={() => {
             handelOnPump && handelOnPump();
@@ -32,7 +32,7 @@ const ButtonPumpOperations = () => {
         </Button>
         <Button
           className={`${PumpPower ? "bg-[#3d4045]" : ""} `}
-          size="small"
+          size="large"
           onClick={() => {
             handelOffPump && handelOffPump();
           }}
@@ -43,7 +43,7 @@ const ButtonPumpOperations = () => {
         </Button>
         <Button
           className={`bg-[#3d4045]`}
-          size="small"
+          size="large"
           variant="solid"
           color="primary"
         >

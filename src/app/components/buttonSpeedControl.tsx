@@ -22,7 +22,7 @@ const ButtonSpeedControl = () => {
           className={`px-6 ${
             EngineSpeed === "hight" ? "" : "bg-[#3d4045]"
           } py1`}
-          size="small"
+          size="large"
           onClick={() => handelHeightSpeed("hight")}
           variant={"solid"}
           color="cyan"
@@ -31,7 +31,7 @@ const ButtonSpeedControl = () => {
         </Button>
         <Button
           className={`px-6 ${EngineSpeed === "slow" ? "" : "bg-[#3d4045]"} py1`}
-          size="small"
+          size="large"
           variant={"solid"}
           color="cyan"
           onClick={() => handelHeightSpeed("slow")}

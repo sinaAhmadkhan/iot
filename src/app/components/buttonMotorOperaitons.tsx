@@ -24,14 +24,14 @@ const ButtonMotorOperations = () => {
             handelOnMotor();
           }}
           className={`${PowerMotor ? "" : "bg-[#3d4045]"} `}
-          size="small"
+          size="large"
           variant={"solid"}
           color={"green"}
         >
           روشن
         </Button>
         <Button
-          size="small"
+          size="large"
           className={`${PowerMotor ? "bg-[#3d4045]" : ""} `}
           variant={"solid"}
           color={"danger"}
@@ -43,7 +43,7 @@ const ButtonMotorOperations = () => {
         </Button>
         <Button
           className={`bg-[#3d4045]`}
-          size="small"
+          size="large"
           variant="solid"
           color="primary"
         >
