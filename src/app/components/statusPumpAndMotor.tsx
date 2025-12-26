@@ -1,12 +1,11 @@
 "use client";
-
 import { useContext } from "react";
 import { statusMotorContext } from "../context/stautsMotorContext";
 import { statusPumpContext } from "../context/stautsPumpContext";
 import FanIcon from "./Fan";
 
 const StatusPumpAndMotor = () => {
-  const { EngineSpeed, PowerMotor } = useContext(statusMotorContext);
+  const { EngineSpeed } = useContext(statusMotorContext);
   const { PumpPower } = useContext(statusPumpContext);
   return (
     <div className="text-center mx-auto  h-[300px] flex justify-center items-center">

@@ -1,13 +1,11 @@
 "use client";
 import { Button } from "antd";
-import { PoweroffOutlined } from "@ant-design/icons";
 import { Gauge } from "lucide-react";
 import { useContext } from "react";
 import { statusMotorContext } from "../context/stautsMotorContext";
 
 const ButtonSpeedControl = () => {
-  const { EngineSpeed, handelHeightSpeed, PowerMotor } =
-    useContext(statusMotorContext);
+  const { EngineSpeed, handelHeightSpeed } = useContext(statusMotorContext);
   return (
     <div className="border border-1 w-[266px] mx-auto border-white rounded-md py-2">
       <div

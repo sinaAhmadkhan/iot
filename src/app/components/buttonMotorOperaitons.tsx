@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "antd";
-import { PoweroffOutlined } from "@ant-design/icons";
 import { useContext } from "react";
 import { statusMotorContext } from "../context/stautsMotorContext";
 import { Zap } from "lucide-react";
