@@ -1,0 +1,16 @@
+.fan-medium {
+  animation: fanAnimation 1s linear infinite;
+}
+
+.fan-fast {
+  animation: fanAnimation 0.4s linear infinite;
+}
+
+@keyframes fanAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
